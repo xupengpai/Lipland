@@ -1,3 +1,6 @@
+   
+# 简介
+   
    lipland是一个基于android系统的轻量级插件框架，一个apk可以免修改、免安装，直接运行在插件系统内，插件可动态网络下载更新，可以与宿主共享jar包、so库，也可以独立使用自己的。Lipland开发宗旨是：轻便灵活、简单易用、功能稳定、兼容性好。
 
    lipland在360搜索app中得到全面应用，几乎每一个稍微独立的入口都是一个插件，插件的开发团队各不相同，各个插件又在各大不同的产品线中得到复用，有的插件本身也是一个独立发布的产品。这种插件化技术，为产品的解耦合和复用带来了极高的效益，功能升级对用户零打扰。
@@ -31,13 +34,15 @@
 
 3. 启动插件
 
-   * className方式
+* className方式
+   
 ```java
   Intent intent = new Intent();
   intent.setClassName("com.testplugin","com.testplugin.MainActivity");
   context.startActivity(intent);
 ```
-   * Action方式
+* Action方式
+   
 ```java
   Intent intent = new Intent();
   intent.setAction("action.testplugin.main");
@@ -64,25 +69,27 @@
 
 * eclipse
 
-1、将jar包放入libs下。
+   1. 将jar包放入libs下。
 
-2、将AndroidManifest.xml中的配置拷贝到主工程中。
+   2. 将AndroidManifest.xml中的配置拷贝到主工程中。
 
-建议使用gradle，部分配置能自动生成。
+   建议使用gradle，部分配置能自动生成。
 
 
 谁在使用
 =======
 
-360搜索
 
-360语音助手
+   360搜索
 
-360身边生活
+   360语音助手
 
-360免费wifi
+   360身边生活
 
-360盖娅
+   360免费wifi
+
+   360盖娅
+   
 
 如果你在应用中使用了Lipland，请发邮件到xupengpai163@gmail.com告诉我，可以将你展示在这里
 
