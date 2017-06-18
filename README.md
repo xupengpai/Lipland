@@ -7,6 +7,8 @@
 
 
 ![Screenshot 1](images/2.gif)&nbsp;
+![Screenshot 2](images/1.gif)&nbsp;
+![Screenshot 3](images/3.gif)
 
 
 # 特性
