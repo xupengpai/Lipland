@@ -6,9 +6,7 @@
 　lipland在360搜索app中得到全面应用，几乎每一个稍微独立的入口都是一个插件，插件的开发团队各不相同，各个插件又在各大不同的产品线中得到复用，有的插件本身也是一个独立发布的产品。这种插件化技术，为产品的解耦合和复用带来了极高的效益，功能升级对用户零打扰。
 
 
-![Screenshot 1](images/2.gif)&nbsp;
-![Screenshot 2](images/1.gif)&nbsp;
-![Screenshot 3](images/3.gif)
+![Screenshot 1](images/1.gif)&nbsp;
 
 
 # 特性
