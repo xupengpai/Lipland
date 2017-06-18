@@ -15,7 +15,7 @@
  * 单进程，用一个独立的插件进程统一管理插件和内存，复杂度低。
 
 
-# 使用
+# 如何使用
 
 1. 在你的应用的Application.onCreate()中加入以下代码，即可完成插件框架的安装。
 
@@ -23,21 +23,21 @@
   PluginManager.setup(app);
 ```
         
-2.安装插件
+2. 安装插件
 
 ```java
   PluginManager.getInstance().install("myplugin","1.0.0","/sdcard/myplugin.apk");
 ```
 
-3.启动插件
+3. 启动插件
 
-* className方式
+   * className方式
 ```java
   Intent intent = new Intent();
   intent.setClassName("com.testplugin","com.testplugin.MainActivity");
   context.startActivity(intent);
 ```
-* Action方式
+   * Action方式
 ```java
   Intent intent = new Intent();
   intent.setAction("action.testplugin.main");
@@ -50,17 +50,17 @@
 
 * Gradle
 
-将aar包libs下，在gradle中加入以下内容：
-```groovy
-dependencies {
-    compile(name: 'pluginloader_v2.0.6', ext: 'aar') 
-}
-repositories {
-     flatDir{
-         dirs 'libs';
-      }
-}
-```
+   将aar包libs下，在gradle中加入以下内容：
+   ```groovy
+   dependencies {
+       compile(name: 'pluginloader_v2.0.6', ext: 'aar') 
+   }
+   repositories {
+        flatDir{
+            dirs 'libs';
+         }
+   }
+   ```
 
 * eclipse
 
