@@ -4,10 +4,12 @@
 　lipland是一个基于android系统的轻量级插件框架，一个apk可以免修改、免安装，直接运行在插件系统内，插件可动态网络下载更新，可以与宿主共享jar包、so库，也可以独立使用自己的。Lipland开发宗旨是：轻便灵活、简单易用、功能稳定、兼容性好。
 
 　lipland在360搜索app中得到全面应用，几乎每一个稍微独立的入口都是一个插件，插件的开发团队各不相同，各个插件又在各大不同的产品线中得到复用，有的插件本身也是一个独立发布的产品。这种插件化技术，为产品的解耦合和复用带来了极高的效益，功能升级对用户零打扰。
+ 
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;![Screenshot 1](images/1.gif)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;![Screenshot 1](images/1.gif)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 ![Screenshot 2](images/2.gif)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 ![Screenshot 3](images/3.gif)
+
 
 上图展示了从宿主启动插件，无论是启动速度还是运行效果，跟在app本身里面运行没有任何差别。
 
