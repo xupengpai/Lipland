@@ -10,6 +10,7 @@
 ![Screenshot 1](images/2.gif)&nbsp;
 ![Screenshot 1](images/3.gif)
 
+上图展示了从宿主启动插件，无论是启动速度还是运行效果，跟在app本身里面运行没有任何差别。
 
 # 特性
 
