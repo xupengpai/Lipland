@@ -55,7 +55,7 @@
 
 * Gradle
 
-   将aar包libs下，在gradle中加入以下内容：
+   将编译后的aar包放在主程序的libs下，在gradle中加入以下内容：
    
    ```groovy
    dependencies {
@@ -70,11 +70,11 @@
 
 * eclipse
 
-　　1. 将jar包放入libs下。
+　　1. 将编译好的jar包放入主程序的libs下。
 
 　　2. 将AndroidManifest.xml中的配置拷贝到主工程中。
 
-　　建议使用gradle，部分配置能自动生成。
+  　gradle也可以使用jar包，配置方式和eclipse一样，建议使用gradle和.aar，部分配置可以自动生成，比较方便。
 
 
 谁在使用
