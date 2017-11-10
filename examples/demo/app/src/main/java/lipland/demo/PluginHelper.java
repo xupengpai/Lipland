@@ -2,7 +2,10 @@ package lipland.demo;
 
 import android.app.Application;
 import android.os.Build;
+import android.view.View;
 
+import com.qihoo.plugin.base.BasePluginProcessListener;
+import com.qihoo.plugin.base.PluginProcessListener;
 import com.qihoo.plugin.core.PluginManager;
 
 
@@ -48,6 +51,8 @@ public class PluginHelper {
         pluginManager.setDebug(true);
         pluginManager.setVerifySign(false);
 
+
+
         //配置插件管理器，可选
         configure();
 
@@ -66,6 +71,10 @@ public class PluginHelper {
     //对插件管理器进行配置和，非必选
     //包括对捆包插件的初始化、安装/加载/更新插件的监听、crash信息处理、日志处理、优化设置等等
     public static void configure(){
+
+
+        //提前启动插件进程，加快后续插件启动速度
+        com.qihoo.plugin.base.PluginHelper.startPluginProcess(new BasePluginProcessListener());
 
         PluginManager pluginManager = PluginManager.getInstance();
 

@@ -5,6 +5,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 
+import com.qihoo.plugin.base.BasePluginProcessListener;
 import com.qihoo.plugin.base.ui.PluginsActivity;
 
 
@@ -19,10 +20,17 @@ public class MainActivity extends Activity {
         findViewById(R.id.btn_start_sample_plugin).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent();
-                intent.setClassName("lipland.sample_plugin","lipland.sample_plugin.MainActivity");
+                com.qihoo.plugin.base.PluginHelper.startPluginProcess(new BasePluginProcessListener(){
+
+                    public void onReady() {
+                        Intent intent = new Intent();
+                        intent.setClassName("lipland.sample_plugin","lipland.sample_plugin.MainActivity");
 //                intent.setAction("action.sample_plugin.main");
-                startActivity(intent);
+                        startActivity(intent);
+
+                    }
+
+                });
             }
         });
 
@@ -32,8 +40,14 @@ public class MainActivity extends Activity {
         findViewById(R.id.btn_start_plugin_manager).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(MainActivity.this,PluginsActivity.class);
-                startActivity(intent);
+                com.qihoo.plugin.base.PluginHelper.startPluginProcess(new BasePluginProcessListener(){
+
+                    public void onReady() {
+                        Intent intent = new Intent(MainActivity.this,PluginsActivity.class);
+                        startActivity(intent);
+                    }
+
+                });
             }
         });
 
