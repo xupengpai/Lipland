@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<plugins> 
+
+    <plugin tag="novel"> 
+        <name>小说插件</name>  
+        <packageName>cn.qihoo.reader</packageName>  
+        <desc>360小说阅读器</desc> 
+    </plugin>  
+
+    <plugin tag="safebarcode"> 
+        <name>扫码插件</name>  
+        <packageName>cn.qihoo.barcode</packageName>  
+        <desc>360安全扫码</desc> 
+    </plugin>
+
+    <plugin tag="map"> 
+        <name>导航插件</name>  
+        <packageName>com.qihoo.msearch.qmap</packageName>  
+        <desc>360导航</desc> 
+    </plugin>  
+
+    <update tag="novel" version="1.0.2">
+        <desc>修复了50个BUG</desc>
+        <md5>142A0DF92AE5AC9869D5A299993FE420</md5>
+        <force>true</force>
+        <icon>http://m.360.cn/msearch/plugin/icon/reader_1_0_0.jpg</icon>
+        <url>http://down.360safe.com/reader/360reader_android_beta.apk<url>
+        <rules>
+            <rule type="app" minVer="210" maxVer="500"/>
+            <rule type="android" ignoreVers="21"/>
+        </rules>
+    </update>
+	
+    <update tag="map" version="1.0.1">
+        <desc>修复了200个BUG，加快了启动速度</desc>
+        <md5>CD8BBBBBC2009F7AB8B9E9D3781B76F7</md5>
+        <force>true</force>
+        <icon>http://m.360.cn/msearch/plugin/icon/barcode.jpg</icon>
+        <url>http://down.360safe.com/360msearch/app/plugin/qihoo_plugin_MMapPlugin.apk</url>
+        <rules>
+        </rules>
+    </update>
+	
+    <update tag="safebarcode" version="1.0.2">
+        <desc>修复了200个BUG，加快了启动速度</desc>
+        <md5>BABF695DD77ED96A967C6274626871D1</md5>
+        <force>true</force>
+        <icon>http://m.360.cn/msearch/plugin/icon/barcode.jpg</icon>
+        <url>http://down.360safe.com/360msearch/app/plugin/qihoo_plugin_barcode.apk</url>
+        <rules>
+            <rule type="android" minVer="9" maxVer="21"/>
+            <rule type="app" ignoreVers="213" />
+            <rule type="host" minVer="1.0.3" maxVer="1.0.8" />
+            <rule type="host" ignoreVers="1.0.7" />
+        </rules>
+    </update>
+</plugins>

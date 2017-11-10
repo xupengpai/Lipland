@@ -1,0 +1,183 @@
+# To enable ProGuard in your project, edit project.properties
+# to define the proguard.config property as described in that file.
+#
+# Add project specific ProGuard rules here.
+# By default, the flags in this file are appended to flags specified
+# in ${sdk.dir}/tools/proguard/proguard-android.txt
+# You can edit the include path and order by changing the ProGuard
+# include property in project.properties.
+#
+# For more details, see
+#   http://developer.android.com/guide/developing/tools/proguard.html
+
+# Add any project specific keep options here:
+
+# If your project uses WebView with JS, uncomment the following
+# and specify the fully qualified class name to the JavaScript interface
+# class:
+#-keepclassmembers class fqcn.of.javascript.interface.for.webview {
+#   public *;
+#}
+#-optimizationpasses 5
+
+-dontoptimize 
+-dontusemixedcaseclassnames
+-dontskipnonpubliclibraryclasses
+-dontpreverify
+-verbose
+-ignorewarnings
+-optimizations !code/simplification/arithmetic,!field/*,!class/merging/*
+
+#-injars 'bin/pluginloader.jar'
+#-outjars 'pluginloader_sdk_v2.0.5.jar'
+
+#-libraryjars 'jars/android-support-v4.jar'
+#-libraryjars 'jars/android.jar'
+-keepattributes Exceptions,InnerClasses,Signature,Deprecated,*Annotation*,EnclosingMethod
+
+
+-keep public class * extends android.os.Handler.Callback
+-keep public class * extends android.app.Activity
+-keep public class * extends android.app.Application
+-keep public class * extends android.app.Service
+-keep public class * extends android.content.BroadcastReceiver
+-keep public class * extends android.content.ContentProvider
+-keep public class * extends android.app.backup.BackupAgentHelper
+-keep public class * extends android.preference.Preference
+-keep public class * extends android.inputmethodservice.InputMethodService
+
+-keep public class * extends android.support.v4.app.Fragment
+-keep public class com.android.vending.licensing.ILicensingService
+-keep public class * extends android.webkit.WebView
+
+
+-dontwarn android.support.v4.**
+
+-keepclasseswithmembernames class * {
+    native <methods>;
+}
+
+-keepclassmembers public class * extends android.view.View {
+   void set*(***);
+   *** get*();
+}
+-keepclassmembers class **.R$* {
+    public static <fields>;
+}
+
+-keepclasseswithmembers class * { 
+    public <init>(android.content.Context, android.util.AttributeSet);
+}
+-keepclasseswithmembers class * {
+    public <init>(android.content.Context, android.util.AttributeSet, int);
+}
+-keepclassmembers class * extends android.app.Activity {
+    public void *(android.view.View);
+}
+-keepclassmembers enum * {
+    public static **[] values();
+    public static ** valueOf(java.lang.String);
+}
+-keep class * implements android.os.Parcelable {
+    public static final android.os.Parcelable$Creator *;
+}
+
+#-keep class * implements java.lang.reflect.InvocationHandler {
+#    public *;
+#}
+
+
+-keepclassmembers class com.qihoo.plugin.core.ContentProviderFaker {
+    public <methods>;
+}
+-keepclassmembers class com.qihoo.plugin.core.hook.InstrumentationHacker {
+    public <methods>;
+}
+
+
+#-classobfuscationdictionary dictionaries/windows.txt
+
+-keep class android.support.v4.** {*;}
+-keep class com.amap.api.location.** {*;}
+-keep class com.aps.** {*;}
+
+#工具类
+
+-keep public class com.qihoo.common.** { 
+	public *;
+}
+
+-keep class com.qihoo.plugin.DefaultPluginLoadListenner { 
+	public *;
+}
+-keep public class com.qihoo.plugin.manifest.** { 
+	public *;
+}
+
+
+-keep public class com.qihoo.plugin.install.InstallManager { 
+	public *;
+}
+
+-keep public class com.qihoo.plugin.base.DefaultPluginLoadHandler{*;}
+-keep public class com.qihoo.plugin.base.Actions{*;}
+-keep public class com.qihoo.plugin.base.DefaultLogHandler{*;}
+-keep public class com.qihoo.plugin.base.PluginHelper{*;}
+-keep public class com.qihoo.plugin.update.UpdateFilter{*;}
+-keep public class com.qihoo.plugin.update.UpdateService{*;}
+-keep public class com.qihoo.plugin.update.DefaultUpdateFilter{*;}
+-keep public class com.qihoo.plugin.base.ConfigFilter{*;}
+
+
+#keep数据库映射类
+-keep public class com.qihoo.plugin.infos.** { 
+	public *;
+}
+
+#插件模块
+ 
+-keep public class com.qihoo.plugin.http.** { *;}
+-keep public class com.qihoo.plugin.http.HttpClientSession$* { *;}
+
+-keep class com.qihoo.plugin.aidl.* { *; }
+-keep class com.qihoo.plugin.bean.* { *; }
+-keep interface com.qihoo.plugin.** { *; }
+-keep class com.qihoo.plugin.util.PluginUtil { 
+	public *;
+}
+
+-keep class com.qihoo.plugin.ILog { 
+	public *;
+} 
+-keep class com.qihoo.plugin.core.Log { 
+	public *;
+}
+
+-keep class com.qihoo.plugin.IPlugin { 
+	public *;
+}
+
+-keep class com.qihoo.plugin.core.HostContext { 
+	public *;
+}
+
+
+-keep class com.qihoo.plugin.core.PluginManager { 
+	public *;
+}
+
+-keep class com.qihoo.plugin.base.PluginActivity { 
+	public *;
+}
+
+-keepattributes Signature
+-keepattributes *Annotation*
+
+-renamesourcefileattribute SourceFile
+-keepattributes SourceFile,LineNumberTable
+
+
+-keepclassmembers class ** {
+    public void onEvent*(**);
+}
+
