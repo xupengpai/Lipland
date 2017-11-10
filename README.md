@@ -94,7 +94,7 @@ context.startActivity(intent);
 插件更新
 =======
 
-[插件更新](update.md)
+[插件更新](files/md/update.md)
 
 
 谁在使用
