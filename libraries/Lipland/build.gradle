@@ -201,13 +201,11 @@ android.libraryVariants.all { variant ->
         if (output.outputFile != null){
             println "buildType:${variant.buildType.name}"
             if("production".equalsIgnoreCase(variant.buildType.name) || "release".equalsIgnoreCase(variant.buildType.name)) {
-                def apkFile = new File(output.outputFile.getParent(), "pluginloader_v${VERSION}.aar")
-//                def apkFile = new File("${project.rootDir}/CommnonJars/libs", "pluginloader_sdk_v${VERSION}.aar")
-
+                def apkFile = new File(output.outputFile.getParent(), "Lipland_v${VERSION}.aar")
                 println "----" + apkFile.getAbsolutePath()
                 output.outputFile = apkFile
             }else{
-                def apkFile = new File(output.outputFile.getParent(), "pluginloader_v${VERSION}_${variant.buildType.name}.aar")
+                def apkFile = new File(output.outputFile.getParent(), "Lipland_v${VERSION}_${variant.buildType.name}.aar")
                 println "----" + apkFile.getAbsolutePath()
                 output.outputFile = apkFile
             }
