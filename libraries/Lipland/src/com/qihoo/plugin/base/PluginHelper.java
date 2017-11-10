@@ -143,6 +143,10 @@ public class PluginHelper {
 		}
 	}
 
+	public static void startPluginProcess() {
+		startPluginProcess(null);
+	}
+
 	/**
 	 * 使用PluginProcessStartup服务启动插件进程，便于插件启动回调
 	 * 

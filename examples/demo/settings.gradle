@@ -1,1 +1,4 @@
 include ':app'
+
+//include ':Lipland'
+//project(':Lipland').projectDir = new File('../../libraries/Lipland')

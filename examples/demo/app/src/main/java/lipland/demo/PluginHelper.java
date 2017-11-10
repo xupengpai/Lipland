@@ -72,10 +72,6 @@ public class PluginHelper {
     //包括对捆包插件的初始化、安装/加载/更新插件的监听、crash信息处理、日志处理、优化设置等等
     public static void configure(){
 
-
-        //提前启动插件进程，加快后续插件启动速度
-        com.qihoo.plugin.base.PluginHelper.startPluginProcess(new BasePluginProcessListener());
-
         PluginManager pluginManager = PluginManager.getInstance();
 
         //设置插件的日志处理器，可以帮助与宿主的日志处理同步

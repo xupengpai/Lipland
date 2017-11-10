@@ -127,6 +127,7 @@
 -keep public class com.qihoo.plugin.update.UpdateService{*;}
 -keep public class com.qihoo.plugin.update.DefaultUpdateFilter{*;}
 -keep public class com.qihoo.plugin.base.ConfigFilter{*;}
+-keep public class com.qihoo.plugin.base.BasePluginProcessListener{*;}
 
 
 #keep数据库映射类
