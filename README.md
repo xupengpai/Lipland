@@ -135,7 +135,7 @@ context.startActivity(intent);
 
 　360视频播放器
 
-　滴滴打车
+　滴滴打车(SDK)
 
 　360看图插件
 
