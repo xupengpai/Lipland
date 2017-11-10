@@ -131,6 +131,8 @@ context.startActivity(intent);
 
 　360小说
 
+　360天气
+
 　360影视
 
 　360视频播放器
@@ -146,6 +148,8 @@ context.startActivity(intent);
 　拍题插件
 
 　饭补插件
+
+　玩图插件
 
 　等等
 
