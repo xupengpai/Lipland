@@ -1,0 +1,59 @@
+<manifest package="com.qihoo.plugin"
+          xmlns:android="http://schemas.android.com/apk/res/android"
+          android:versionCode="1"
+          android:versionName="1.0">
+
+    <uses-sdk
+        android:minSdkVersion="14"
+        android:targetSdkVersion="19"/>
+
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.WRITE_INTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW"/>
+
+    <application>
+        <service
+            android:name="com.qihoo.plugin.update.UpdateService"
+            android:process=":plugin_update"/>
+        <activity
+            android:name="com.qihoo.plugin.core.ProxyActivity"
+            android:configChanges="orientation|keyboardHidden|keyboard|screenSize|mcc|mnc|locale|touchscreen|navigation|screenLayout|fontScale|smallestScreenSize"
+            android:exported="false"
+            android:process=":plugin"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar"/>
+        <service
+            android:name="com.qihoo.plugin.core.WrapService"
+            android:exported="false"
+            android:process=":plugin"/>
+        <activity
+            android:name="com.qihoo.plugin.base.ui.PluginsActivity"
+            android:label="已安装插件"
+            android:process=":plugin"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"/>
+
+        <service
+            android:name="com.qihoo.plugin.base.PluginProcessStartup"
+            android:process=":plugin"
+            >
+        </service>
+
+        <!--
+			        为了避免多个宿主定义同一个provider的冲突导致安装失败，authorities必须每个宿主应用不一样
+			        规则为[应用包名].plugin.provider.dispatcher
+        <provider
+            android:name="com.qihoo.plugin.core.ContentProviderDispatcher"
+            android:authorities="com.qihoo.haosou.plugin.provider.dispatcher"
+            android:exported="false"
+            android:process=":plugin"
+
+            />
+        -->
+    </application>
+</manifest>

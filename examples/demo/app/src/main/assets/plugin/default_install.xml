@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+
+<plugins>
+
+    <!-- 
+    	目前tag、version、fileName为必配项，其他属性在捆包插件中暂未用上，此处可以忽略
+    	所有属性与update.xml统一
+     -->
+
+	<plugin tag="sample_plugin" version="1.0.0">
+		<name>示例插件</name>
+		<packageName>lipland.sample_plugin</packageName>
+		<desc>没有错，这是一个示例插件</desc>
+		<fileName>sample_plugin.apk</fileName>
+		<loadOnAppStarted>true</loadOnAppStarted>
+	</plugin>
+
+
+
+
+	<!--
+	<plugin tag="safebarcode" version="2.0.2">
+		<name>扫码插件</name>
+		<packageName>cn.qihoo.barcode</packageName>
+		<desc>360安全扫码</desc>
+		<md5>b30646abf8170f33</md5>
+		<fileName>qihoo_plugin_safebarcode.apk</fileName>
+		<loadOnAppStarted>true</loadOnAppStarted>
+		<updateDesc>修复了200个BUG，加快了启动速度</updateDesc>
+		<path>/data/data/cn.qihoo.msearch/file/plugin/safebarcode.apk</path>
+		<icon>http://m.360.cn/msearch/plugin/icon/barcode.jpg</icon>
+		<url>http://m.360.cn/msearch/download/plugin/barcode.apk</url>
+	</plugin>
+
+	<plugin tag="imageplugin" version="1.0.1">
+		<name>美图插件</name>
+		<packageName>com.qihoo.browser.imageplugin</packageName>
+		<desc>360美图</desc>
+		<md5>3c79007262e2bc102b23217b8d26e05b</md5>
+		<fileName>qihoo_plugin_image.apk</fileName>
+		<loadOnAppStarted>true</loadOnAppStarted>
+		<updateDesc>美图</updateDesc>
+		<path>/data/data/com.qihoo.haosou/files/plugin/imageplugin.apk</path>
+		<icon>http://m.360.cn/msearch/plugin/icon/reader_1_0_1.jpg</icon>
+		<url>http://m.360.cn/msearch/download/plugin/reader_v1.0.1.apk</url>
+	</plugin>
+
+     -->
+
+
+
+</plugins>

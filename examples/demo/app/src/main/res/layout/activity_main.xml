@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_marginTop="@dimen/activity_vertical_margin"
+    android:layout_marginBottom="@dimen/activity_vertical_margin"
+    android:layout_marginLeft="@dimen/activity_horizontal_margin"
+    android:layout_marginRight="@dimen/activity_horizontal_margin"
+    android:layout_height="match_parent">
+
+
+    <Button
+        android:id="@+id/btn_start_sample_plugin"
+        android:text="打开示例插件"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"/>
+
+    <!--Button
+        android:id="@+id/btn_start_image_plugin"
+        android:layout_width="match_parent"
+        android:text="启动美图插件"
+        android:layout_height="50dp"/>
+
+    <Button
+        android:id="@+id/btn_start_safebarcode_plugin"
+        android:text="启动扫码插件"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"/-->
+
+    <Button
+        android:id="@+id/btn_start_plugin_manager"
+        android:text="打开插件管理器"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"/>
+
+</LinearLayout>
