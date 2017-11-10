@@ -14,7 +14,7 @@
 
 #  update.xml配置
 
-update\update.xml
+[update.xml](../update/update.xml)
 
 以下为一个标准的update.xml配置，一般情况下比这个简单，这里是为了提供一个比较全面的例子。下面对相关属性进行说明，未特意说明的属性项均为保留的非必填项。
 
