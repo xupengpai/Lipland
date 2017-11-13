@@ -7,7 +7,7 @@
 　
 # 关于名称
  
-Lipland由**li - 轻量级**、**pl - 插件**、**and - 安卓** 英文缩写组合而来。
+　Lipland由 **li - 轻量级**、**pl - 插件**、**and - 安卓** 英文缩写组合而来。
 有些同学说不会读，来，看我口型：李 ~ 普 ~ 兰 ~ 德。对没错，就是这样。。
 
 
@@ -44,9 +44,9 @@ Lipland由**li - 轻量级**、**pl - 插件**、**and - 安卓** 英文缩写�
  - **so库**：同名so库，先从自身libs下加载，如果找不到库，则从宿主的libs加载。
   
 
-该机制可以很大程度的缩减插件体积，一些公用库，例如volley、android-support-v4.ja、v7兼容包、第三方sdk等，插件直接用provided方式引用，这样这些库不会编译到插件中。如果是so库，可以不包含在插件中。
+　该机制可以很大程度的缩减插件体积，一些公用库，例如volley、android-support-v4.ja、v7兼容包、第三方sdk等，插件直接用provided方式引用，这样这些库不会编译到插件中。如果是so库，可以不包含在插件中。
 
-　　在某些情况下，插件想要使用一个不同版本的类、jar包或者so库，那么这个插件只需要把该库以正常的编译方式打包进去即可(jar包使用compile方式编译，so放入libs下)。
+　在某些情况下，插件想要使用一个不同版本的类、jar包或者so库，那么这个插件只需要把该库以正常的编译方式打包进去即可(jar包使用compile方式编译，so放入libs下)。
 
 # 如何使用
 
@@ -89,7 +89,7 @@ context.startActivity(intent);
    
    ```groovy
    dependencies {
-       compile(name: 'pluginloader_v2.0.6', ext: 'aar') 
+       compile(name: 'Lipland_v2.0.6', ext: 'aar') 
    }
    repositories {
         flatDir{
@@ -111,6 +111,23 @@ context.startActivity(intent);
 =======
 
 [插件更新](files/md/update.md)
+
+添加插件
+=======
+
+　增加一个插件有三种方式：
+- **捆包插件**  
+
+    即将插件自带在app中，适合优先级高的插件。在assets/plugin/default_install.xml添加一个插件信息节点，并将插件放入同目录下即可，app第一次启动后，会进行安装。具体配置参加demo。
+
+
+- **插件更新**
+
+    插件更新系统在插件未安装的情况下，会将插件直接安装，利用它可以动态的增加插件。
+
+- **直接安装**
+
+    调用Api直接安装，该方法适合灵活性要求比较高，需要自己管理插件的场景,详情见前述安装插件或者文档。
 
 
 谁在使用
