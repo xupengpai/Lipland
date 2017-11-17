@@ -55,7 +55,7 @@ freeline/
 freeline_project_description.json
 
 .idea/
-.build-types/
+build-types/
 gradle/
 gradlew
 gradlew.bat
