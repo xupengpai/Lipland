@@ -191,7 +191,7 @@ QQ群：589438370
 ![image](files/image/group_qq.png)
 
 <html>
-<a target="_blank" href="//shang.qq.com/wpa/qunwpa?idkey=07c851a366035eb067871fcd3113a8211b27b86bfabf72513bc9f4de242aac84"><img border="0" src="//pub.idqqimg.com/wpa/images/group.png" alt="Lipland交流群" title="Lipland交流群"></a>
+<a target="_blank" href="http://shang.qq.com/wpa/qunwpa?idkey=07c851a366035eb067871fcd3113a8211b27b86bfabf72513bc9f4de242aac84"><img border="0" src="http://pub.idqqimg.com/wpa/images/group.png" alt="Lipland交流群" title="Lipland交流群"></a>
 </html>
 
 
